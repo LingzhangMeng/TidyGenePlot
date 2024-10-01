@@ -7,9 +7,10 @@ the element "Identify" and the legend on the plot;  as well as the feature plots
 R package <br/>Seurat (version 3.1.2 or higher)<br/> patchwork (version 1.0.1 or higher) <br/> ggplot2 (version 3.5.1 or higher)
 
 # Install TidyGenePlot
-library(devtools) <br/>  devtools::install_github("LingzhangMeng/TidyGenePlot")
+library(devtools) <br/>  devtools::install_github("LingzhangMeng/TidyGenePlot") <br/>  library(TidyGenePlot) 
 
 # User Guideline
+library(TidyGenePlot) <br/> 
 Function 1: to generate tidy/clean violin plot(s) <br/> <br/> 
 tidy.VlnPlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, ncol = n)     <br/>
 Explaination <br/> 
@@ -29,6 +30,7 @@ Explaination <br/>
   colors: Do Not set it to "NULL", only 2 colors could be set, the first color will be used as backgroud, the second color will be used as gene expression level. I'd suggest set it to c("grey", "blue"), or set it to c("grey", "red") <br/> 
   n: plot numbers arranged in each row, could be customized to numbers, such as 1, 2, 3, 4 5, 6...<br/> <br/>
   # Examples and Comparison
+  library(TidyGenePlot) <br/> 
   cb_palette <- c("#ed1299", "#09f9f5", "#246b93", "#cc8e12", "#d561dd", "#c93f00", "#ddd53e", "#4aef7b", 
                 "#e86502", "#9ed84e", "#AB3282", "#CCC9E6", "#8249aa", "#99db27", "#DCC1DD", "#ff523f",
                 "#ce2523", "#f7aa5d", "#cebb10", "#03827f", "#931635", "#373bbf", "#a1ce4c", "#ef3bb6", 
