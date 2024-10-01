@@ -11,6 +11,9 @@ library(devtools) <br/>  devtools::install_github("LingzhangMeng/TidyGenePlot") 
 
 # User Guideline
 library(TidyGenePlot) <br/> 
+library(Seurat) <br/>
+library(ggplot2) <br/>
+library(patchwork) <br/>
 Function 1: to generate tidy/clean violin plot(s) <br/> <br/> 
 tidy.VlnPlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, ncol = n)     <br/>
 Explaination <br/> 
