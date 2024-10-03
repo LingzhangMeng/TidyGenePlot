@@ -15,9 +15,9 @@ library(devtools) <br/>  devtools::install_github("LingzhangMeng/TidyGenePlot") 
 library(TidyGenePlot) <br/> 
 library(Seurat) <br/>
 library(ggplot2) <br/>
-library(patchwork) <br/>
+library(patchwork) <br/> <br/>
 Function 1: to generate tidy/clean violin plot(s) <br/> <br/> 
-tidy.VlnPlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, ncol = n)     <br/>
+tidy.VlnPlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, ncol = n)     <br/> <br/>
 Explaination <br/> 
   seu_obj: seurat object created by R package Seurat <br/>
   feature.list: a vector contaiing genes <br/> 
@@ -27,7 +27,7 @@ Explaination <br/>
 
 
 Function 2: to generate tidy/clean feature plot(s) <br/> <br/> 
-tidy.FeaturePlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, Legend = FALSE, ncol = n)     <br/>
+tidy.FeaturePlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, Legend = FALSE, ncol = n)     <br/> <br/>
 Explaination <br/> 
   seu_obj: seurat object created by R package Seurat <br/>
   feature.list: a vector contaiing genes <br/> 
