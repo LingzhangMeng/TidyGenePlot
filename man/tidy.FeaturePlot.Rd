@@ -2,14 +2,15 @@
 % Please edit documentation in R/TidyGenePlot.R
 \name{tidy.FeaturePlot}
 \alias{tidy.FeaturePlot}
-\title{Title}
+\title{Title Generate tidy/clean feature plot(s) from scRNA-seq analysis}
 \usage{
 tidy.FeaturePlot(
   seu_obj,
   features,
   pt.size = 0.5,
-  ncol = 1,
-  cols = c("gray", "blue")
+  ncol = NULL,
+  cols = c("gray", "red"),
+  Legend = TRUE
 )
 }
 \arguments{
@@ -27,5 +28,5 @@ tidy.FeaturePlot(
 combined_plot
 }
 \description{
-Title
+Title Generate tidy/clean feature plot(s) from scRNA-seq analysis
 }

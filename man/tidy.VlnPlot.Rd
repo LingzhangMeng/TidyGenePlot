@@ -2,9 +2,9 @@
 % Please edit documentation in R/TidyGenePlot.R
 \name{tidy.VlnPlot}
 \alias{tidy.VlnPlot}
-\title{Title}
+\title{Title Generate tidy/clean violin plot(s) from scRNA-seq analysis}
 \usage{
-tidy.VlnPlot(seu_obj, features, pt.size = 0.5, ncol = 1, cols = NULL)
+tidy.VlnPlot(seu_obj, features, pt.size = 0.5, ncol = NULL, cols = NULL)
 }
 \arguments{
 \item{seu_obj}{seurat object created with R package Seurat}
@@ -21,5 +21,5 @@ tidy.VlnPlot(seu_obj, features, pt.size = 0.5, ncol = 1, cols = NULL)
 combined_plot
 }
 \description{
-Title
+Title Generate tidy/clean violin plot(s) from scRNA-seq analysis
 }
