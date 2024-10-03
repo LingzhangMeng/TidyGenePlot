@@ -18,9 +18,9 @@ library(ggplot2) <br/>
 library(patchwork) <br/> <br/>
 Function 1: to generate tidy/clean violin plot(s) <br/> <br/> 
 tidy.VlnPlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, ncol = n)     <br/> <br/>
-Explaination <br/> 
-  seu_obj: seurat object created by R package Seurat <br/>
-  feature.list: a vector contaiing genes <br/> 
+Explanation <br/> 
+  seu_obj: a seurat object created by R package Seurat <br/>
+  feature.list: a vector containing genes <br/> 
   pointsize: pointsize used for drawing plot, number from 0 to 2 could be set, for example 0, 0.5, 1 or 2. <br/> 
   colors: could be set "NULL", which used the color panel from Seurat. Or could be customized by youself (color numbers should be equal or more than cluster numbers) <br/> 
   n: plot numbers arranged in each row, could be customized to numbers, such as 1, 2, 3, 4 5, 6...<br/> <br/> <br/> 
