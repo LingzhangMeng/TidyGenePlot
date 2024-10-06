@@ -11,14 +11,17 @@
 #' @return combined_plot
 #' @export
 #' @examples
-
+#' # Examples will be added in a future release.
 
 # State dependencies and functions
 #'@importFrom Seurat VlnPlot
-#'@importFrom Seurat FeaturePlot
+#'@importFrom Seurat DefaultAssay
+#'@importFrom ggplot2 labs
+#'@importFrom ggplot2 theme
 #'@importFrom patchwork wrap_plots
 
-tidy.VlnPlot <- function(seu_obj, features, pt.size = 0.5, ncol = NULL, cols = NULL) {
+tidy.VlnPlot <- function(seu_obj, features, pt.size = 0.5, ncol = NULL,
+                                  cols = NULL, split.by = NULL) {
   # Define data slot for analyzing
   DefaultAssay(seu_obj) <- "RNA"
 
@@ -29,11 +32,18 @@ tidy.VlnPlot <- function(seu_obj, features, pt.size = 0.5, ncol = NULL, cols = N
   plots <- list()
 
   # Draw tidy violin plot(s)
+  if (is.null(split.by)) {
   for (i in seq_along(features)) {
     plots[[i]] <- Seurat::VlnPlot(seu_obj, pt.size = pt.size, features = features[i], cols = cols)
     plots[[i]] <- plots[[i]] + labs(x = NULL) + labs(y = NULL) + NoLegend()
-  }
-
+                                 }
+         } else if (!is.null(split.by)) {
+           for (i in seq_along(features)) {
+                  plots[[i]] <- Seurat::VlnPlot(seu_obj, pt.size = pt.size, features = features[i], cols = cols,
+                                               split.by = split.by, combine = TRUE)
+                   plots[[i]] <- plots[[i]] + labs(x = NULL) + labs(y = NULL)
+                                      }
+                                                   }
   # Arrange the plot(s) layout
    if (is.null(ncol)) {
       if(length(features) <= 3){
@@ -67,7 +77,6 @@ tidy.VlnPlot <- function(seu_obj, features, pt.size = 0.5, ncol = NULL, cols = N
 
 #######################################################################
 #######################################################################
-
 #' Title Generate tidy/clean feature plot(s) from scRNA-seq analysis
 #' @param seu_obj seurat object created with R package Seurat
 #' @param features a vector containing genes
@@ -77,11 +86,13 @@ tidy.VlnPlot <- function(seu_obj, features, pt.size = 0.5, ncol = NULL, cols = N
 #' @return combined_plot
 #' @export
 #' @examples
-
+#' # Examples will be added in a future release.
 
 # State dependencies and functions
-#'@importFrom Seurat VlnPlot
 #'@importFrom Seurat FeaturePlot
+#'@importFrom Seurat DefaultAssay
+#'@importFrom ggplot2 labs
+#'@importFrom ggplot2 theme
 #'@importFrom patchwork wrap_plots
 
 tidy.FeaturePlot <- function(seu_obj, features, pt.size = 0.5, ncol = NULL,
@@ -99,18 +110,19 @@ tidy.FeaturePlot <- function(seu_obj, features, pt.size = 0.5, ncol = NULL,
   for (i in seq_along(features)) {
     plots[[i]] <- Seurat::FeaturePlot(seu_obj, pt.size = pt.size, features = features[i], cols = cols) +
       NoAxes()  +
-      theme(panel.border = element_rect(color = "black", fill = NA, linewidth = 1))
+      theme(panel.border = element_rect(color = "black", fill = NA, linewidth = 0.5))
                                  }
   # Handle legends in the plot(s)
-  if(isTRUE(Legend)) {
+  if (isTRUE(Legend)) {
     for (i in seq_along(features)) {
-    plots[[i]] <- plots[[i]]
-                                     }
-  } else if (isFALSE(Legend)) {
-    for (i in seq_along(features)) {
-    plots[[i]] <- plots[[i]] + NoLegend()
-  }
-  }
+             plots[[i]] <- plots[[i]]
+                                  }
+                     } else if (isFALSE(Legend)) {
+                          for (i in seq_along(features)) {
+                            plots[[i]] <- plots[[i]] + NoLegend()
+                          }
+                     }
+
 
   # Arrange the plot(s) layout
   if (is.null(ncol)) {

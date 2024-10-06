@@ -4,11 +4,13 @@ Title: Generation of tidy violin plots and tidy feature plots from scRNA-seq ana
 Version: 0.1.0
 Author: Lingzhang Meng, Jian Song and Hongmian Li
 Maintainer: The package maintainer <lzmeng@gxams.org.cn>
-Description: generating tidy and clean violin plots by removing "identities" and legends,
+Description: TidyGenePlot facilitates the generation of tidy and clean violin plots and feature plots from single-cell RNA sequencing (scRNA-seq) analyses by removing identities and legends for clarity.
 License: FALSE
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 4.2.1)
+Depends: R(>= 4.4.1)
 RoxygenNote: 7.3.2
-Imports: Seurat,
-         patchwork
+Imports: 
+  Seurat, 
+  patchwork, 
+  ggplot2

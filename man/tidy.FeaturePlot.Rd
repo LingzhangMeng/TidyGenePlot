@@ -30,3 +30,6 @@ combined_plot
 \description{
 Title Generate tidy/clean feature plot(s) from scRNA-seq analysis
 }
+\examples{
+# Examples will be added in a future release.
+}

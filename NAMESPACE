@@ -2,6 +2,9 @@
 
 export(tidy.FeaturePlot)
 export(tidy.VlnPlot)
+importFrom(Seurat,DefaultAssay)
 importFrom(Seurat,FeaturePlot)
 importFrom(Seurat,VlnPlot)
+importFrom(ggplot2,labs)
+importFrom(ggplot2,theme)
 importFrom(patchwork,wrap_plots)

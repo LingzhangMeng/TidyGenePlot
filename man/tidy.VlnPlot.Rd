@@ -4,7 +4,14 @@
 \alias{tidy.VlnPlot}
 \title{Title Generate tidy/clean violin plot(s) from scRNA-seq analysis}
 \usage{
-tidy.VlnPlot(seu_obj, features, pt.size = 0.5, ncol = NULL, cols = NULL)
+tidy.VlnPlot(
+  seu_obj,
+  features,
+  pt.size = 0.5,
+  ncol = NULL,
+  cols = NULL,
+  split.by = NULL
+)
 }
 \arguments{
 \item{seu_obj}{seurat object created with R package Seurat}
@@ -22,4 +29,7 @@ combined_plot
 }
 \description{
 Title Generate tidy/clean violin plot(s) from scRNA-seq analysis
+}
+\examples{
+# Examples will be added in a future release.
 }
