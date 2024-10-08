@@ -48,8 +48,13 @@ Explaination <br/>
   FeaturePlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"),  ncol = 3)  <br/>
   <img width="773" alt="3" src="https://github.com/user-attachments/assets/0c3ba7e6-8e70-411b-84a2-76399fd4ca1b"> <br/> <br/>
   
-tidy.FeaturePlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), cols = c("grey", "red"), Legnd = TRUE, ncol = 3) <br/>
-<img width="770" alt="4" src="https://github.com/user-attachments/assets/8b498ee6-8699-4fc2-985e-468d11d44d57">
+tidy.FeaturePlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), Legnd = TRUE) <br/>
+<img width="770" alt="4" src="https://github.com/user-attachments/assets/8b498ee6-8699-4fc2-985e-468d11d44d57"> <br/> <br/>
+
+
+tidy.FeaturePlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), Legnd = FALSE)<br/> <br/>
+![feature plot](https://github.com/user-attachments/assets/b9570b07-c8a8-45b9-9ae8-ce544a8baa3c) <br/>
+
 
 
 
