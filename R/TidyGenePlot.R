@@ -36,7 +36,7 @@ tidy.VlnPlot <- function(seu_obj, features, pt.size = 0.5, ncol = NULL,
 
   features_missing <- setdiff(features_available, features)
 
-  if (length(missing_genes) > 0) {
+  if (length(features_missing) > 0) {
     message("The following genes are not present in the dataset and will be skipped: ", paste(features_missing, collapse = ", "))
   }
 
@@ -122,7 +122,7 @@ tidy.FeaturePlot <- function(seu_obj, features, pt.size = 0.5, ncol = NULL,
 
   features_missing <- setdiff(features_available, features)
 
-  if (length(missing_genes) > 0) {
+  if (length(features_missing) > 0) {
     message("The following genes are not present in the dataset and will be skipped: ", paste(features_missing, collapse = ", "))
   }
 
