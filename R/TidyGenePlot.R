@@ -31,6 +31,17 @@ tidy.VlnPlot <- function(seu_obj, features, pt.size = 0.5, ncol = NULL,
   # Prepare a list to store plot(s)
   plots <- list()
 
+  # Check if genes are present in the dataset
+  features_available <- intersect(features, rownames(as.matrix(seu_obj[["RNA"]]$counts)))
+
+  features_missing <- setdiff(features_available, features)
+
+  if (length(missing_genes) > 0) {
+    message("The following genes are not present in the dataset and will be skipped: ", paste(features_missing, collapse = ", "))
+  }
+
+  features <- features_available
+
   # Draw tidy violin plot(s)
   if (is.null(split.by)) {
   for (i in seq_along(features)) {
@@ -105,6 +116,17 @@ tidy.FeaturePlot <- function(seu_obj, features, pt.size = 0.5, ncol = NULL,
 
   # Prepare a list to store plot(s)
   plots <- list()
+
+  # Check if genes are present in the dataset
+  features_available <- intersect(features, rownames(as.matrix(seu_obj[["RNA"]]$counts)))
+
+  features_missing <- setdiff(features_available, features)
+
+  if (length(missing_genes) > 0) {
+    message("The following genes are not present in the dataset and will be skipped: ", paste(features_missing, collapse = ", "))
+  }
+
+  features <- features_available
 
   # Draw tidy feature plot(s)
   for (i in seq_along(features)) {
