@@ -50,6 +50,8 @@ Generates clean feature plots without coordinate axes, with an option to include
 ```R
 tidy.FeaturePlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, Legend = FALSE, ncol = n)
 ```
+**Example output**
+<img width="857" height="329" alt="1" src="https://github.com/user-attachments/assets/381d5458-da55-4776-9e99-9ed2e1e77068" />
 
 #### Parameters
 - `seu_obj`: A Seurat object created using the Seurat package.
