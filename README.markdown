@@ -36,8 +36,8 @@ Generates clean violin plots without the "Identity" label or legend.
 ```R
 tidy.VlnPlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, ncol = n)
 ```
-**Example output** \
-<img width="1235" height="452" alt="2" src="https://github.com/user-attachments/assets/3d963a45-e715-4ee5-b734-4054b4e8f54c" />
+**Example output** 
+
 
 
 #### Parameters
