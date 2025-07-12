@@ -53,7 +53,7 @@ Generates clean feature plots without coordinate axes, with an option to include
 ```R
 tidy.FeaturePlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, Legend = FALSE, ncol = n)
 ```
-**Example output** \
+**Example output** 
 
 <img width="770" height="453" alt="4" src="https://github.com/user-attachments/assets/10e470ac-6f92-46bb-95c8-66c27aedcb7d" />
 
@@ -81,7 +81,7 @@ cb_palette <- c("#ed1299", "#09f9f5", "#246b93", "#cc8e12", "#d561dd", "#c93f00"
 # Seurat default violin plot
 VlnPlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), 
         pt.size = 0, ncol = 3)
-**Example output** \
+**Example output** 
 
 
 
