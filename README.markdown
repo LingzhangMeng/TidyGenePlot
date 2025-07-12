@@ -82,7 +82,7 @@ cb_palette <- c("#ed1299", "#09f9f5", "#246b93", "#cc8e12", "#d561dd", "#c93f00"
 VlnPlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), 
         pt.size = 0, ncol = 3)
 **Example output** \
-<img width="857" height="329" alt="1" src="https://github.com/user-attachments/assets/2aa0e656-de7f-4a2f-aded-6be11b3f8879" />
+
 
 
 # TidyGenePlot violin plot
