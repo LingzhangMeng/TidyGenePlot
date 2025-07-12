@@ -37,7 +37,8 @@ Generates clean violin plots without the "Identity" label or legend.
 tidy.VlnPlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, ncol = n)
 ```
 **Example output** \
-<img width="857" height="329" alt="1" src="https://github.com/user-attachments/assets/381d5458-da55-4776-9e99-9ed2e1e77068" />
+<img width="1235" height="452" alt="2" src="https://github.com/user-attachments/assets/3d963a45-e715-4ee5-b734-4054b4e8f54c" />
+
 
 #### Parameters
 - `seu_obj`: A Seurat object created using the Seurat package.
@@ -52,6 +53,9 @@ Generates clean feature plots without coordinate axes, with an option to include
 ```R
 tidy.FeaturePlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, Legend = FALSE, ncol = n)
 ```
+**Example output** \
+
+<img width="770" height="453" alt="4" src="https://github.com/user-attachments/assets/10e470ac-6f92-46bb-95c8-66c27aedcb7d" />
 
 
 #### Parameters
@@ -77,6 +81,9 @@ cb_palette <- c("#ed1299", "#09f9f5", "#246b93", "#cc8e12", "#d561dd", "#c93f00"
 # Seurat default violin plot
 VlnPlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), 
         pt.size = 0, ncol = 3)
+**Example output** \
+<img width="857" height="329" alt="1" src="https://github.com/user-attachments/assets/2aa0e656-de7f-4a2f-aded-6be11b3f8879" />
+
 
 # TidyGenePlot violin plot
 tidy.VlnPlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), 
