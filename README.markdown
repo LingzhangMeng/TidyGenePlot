@@ -81,25 +81,50 @@ cb_palette <- c("#ed1299", "#09f9f5", "#246b93", "#cc8e12", "#d561dd", "#c93f00"
                 "#8e3af4")
 
 # Seurat default violin plot
-VlnPlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), 
+VlnPlot(seu_obj, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), 
         pt.size = 0, ncol = 3)
+```
 **Example output** 
 
+<img width="928" height="557" alt="Weixin Image_20250713115004" src="https://github.com/user-attachments/assets/39f65a7c-bf6d-4961-8cce-50b7961675c5" />
 
-
+```R
 # TidyGenePlot violin plot
 tidy.VlnPlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), 
              pt.size = 0, cols = cb_palette, ncol = 3)
+```
+**Example output** 
 
+<img width="928" height="385" alt="Weixin Image_20250713115151" src="https://github.com/user-attachments/assets/9684e8e1-a5a7-42ff-9b5a-6968ca208bcf" />
+
+
+```R
 # Seurat default feature plot
 FeaturePlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), 
             ncol = 3)
+```
+**Example output** 
 
+![Uploading Weixin Image_20250713115316.png…]()
+
+
+```R
 # TidyGenePlot feature plot with legend
 tidy.FeaturePlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), 
                 pt.size = 1, cols = c("grey", "blue"), Legend = TRUE, ncol = 3)
+```
+**Example output** 
 
+![Uploading Weixin Image_20250713115431.png…]()
+
+```R
 # TidyGenePlot feature plot without legend
 tidy.FeaturePlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn"), 
                 pt.size = 1, cols = c("grey", "blue"), Legend = FALSE, ncol = 3)
 ```
+**Example output** 
+
+<img width="676" height="482" alt="Weixin Image_20250713115553" src="https://github.com/user-attachments/assets/7ed79626-0c1a-421d-a2e9-3bdb2373fe18" />
+
+
+
