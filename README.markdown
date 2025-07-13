@@ -34,9 +34,11 @@ library(patchwork)
 Generates clean violin plots without the "Identity" label or legend.
 
 ```R
-tidy.VlnPlot(seu_obj, features = feature.list, pt.size = pointsize, cols = colors, ncol = n)
+feature.list <- c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn")
+tidy.VlnPlot(seu_obj, features = feature.list, pt.size = 0, ncol = 3)
 ```
 **Example output** 
+<img width="923" height="554" alt="Weixin Image_20250713114713" src="https://github.com/user-attachments/assets/2deeda09-1f32-47d1-8f4e-58818df44ae6" />
 
 
 
