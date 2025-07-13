@@ -104,8 +104,9 @@ FeaturePlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3", "Sfn
             ncol = 3)
 ```
 **Example output** 
+<img width="751" height="487" alt="Weixin Image_20250713115316" src="https://github.com/user-attachments/assets/0ea040fd-9930-4a8a-ac2a-8473abe3f343" />
 
-![Uploading Weixin Image_20250713115316.png…]()
+
 
 
 ```R
@@ -116,6 +117,7 @@ tidy.FeaturePlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3",
 **Example output** 
 
 ![Uploading Weixin Image_20250713115431.png…]()
+
 
 ```R
 # TidyGenePlot feature plot without legend
