@@ -116,7 +116,8 @@ tidy.FeaturePlot(Control, features = c("Krt14", "Krt5", "Il1b", "Cd34", "Fxyd3",
 ```
 **Example output** 
 
-![Uploading Weixin Image_20250713115431.png…]()
+<img width="743" height="484" alt="Weixin Image_20250713115431" src="https://github.com/user-attachments/assets/e073c8e7-d74d-4aee-8717-8941f10f4918" />
+
 
 
 ```R
